@@ -1,52 +1,50 @@
 @extends('layouts.app')
 
 @section('content')
-    @if (session('status'))
-        <div>
-            {{ session('status') }}
-        </div>
-    @endif
-
-    @if ($errors->any())
-        <div>
-            <div>{{ __('Whoops! Something went wrong.') }}</div>
-
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-validation-errors />
 
     <form method="POST" action="{{ route('login') }}">
         @csrf
 
-        <div>
-            <label>{{ __('Email') }}</label>
-            <input type="email" name="email" value="{{ old('email') }}" required autofocus />
+        <div class="field">
+            <label for="email" class="label">
+                {{ __('Email') }}
+            </label>
+            <div class="control">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Password') }}</label>
-            <input type="password" name="password" required autocomplete="current-password" />
+        <div class="field">
+            <label for="password" class="label">
+                {{ __('Password') }}
+            </label>
+            <div class="control">
+                <input type="password" id="password" name="password" required autocomplete="current-password" />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Remember me') }}</label>
-            <input type="checkbox" name="remember">
+        <div class="field">
+            <div class="control">
+                <label for="remember" class="checkbox">
+                    <input type="checkbox" id="remember" name="remember" />
+                    {{ __('Remember me') }}
+                </label>
+            </div>
+        </div>
+
+        <div class="buttons">
+            <button class="button is-primary" type="submit">
+                {{ __('Login') }}
+            </button>
         </div>
 
         @if (Route::has('password.request'))
-            <a href="{{ route('password.request') }}">
-                {{ __('Forgot your password?') }}
-            </a>
+            <div class="block">
+                <a href="{{ route('password.request') }}">
+                    {{ __('Forgot your password?') }}
+                </a>
+            </div>
         @endif
-
-        <div>
-            <button type="submit">
-               {{ __('Login') }}
-            </button>
-        </div>
     </form>
 @endsection

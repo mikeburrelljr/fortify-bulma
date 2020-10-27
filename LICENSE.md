@@ -1,6 +1,6 @@
 The MIT License (MIT)
 
-Copyright (c) Your Name <you@yourdomain.com>
+Copyright (c) Mike Burrell, Jr. <mike@remoteforce.com>
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

@@ -2,23 +2,35 @@
     @csrf
     @method('PUT')
 
-    <div>
-        <label>{{ __('Current Password') }}</label>
-        <input type="password" name="current_password" required autocomplete="current-password" />
+    <div class="field">
+        <label for="current_password" class="label">
+            {{ __('Current Password') }}
+        </label>
+        <div class="control">
+            <input type="password" id="current_password" name="current_password" required autocomplete="current-password" />
+        </div>
     </div>
 
-    <div>
-        <label>{{ __('Password') }}</label>
-        <input type="password" name="password" required autocomplete="new-password" />
+    <div class="field">
+        <label for="password" class="label">
+            {{ __('Password') }}
+        </label>
+        <div class="control">
+            <input type="password" id="password" name="password" required autocomplete="new-password" />
+        </div>
     </div>
 
-    <div>
-        <label>{{ __('Confirm Password') }}</label>
-        <input type="password" name="password_confirmation" required autocomplete="new-password" />
+    <div class="field">
+        <label for="password_confirmation" class="label">
+            {{ __('Confirm Password') }}
+        </label>
+        <div class="control">
+            <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" />
+        </div>
     </div>
 
-    <div>
-        <button type="submit">
+    <div class="buttons">
+        <button class="button is-primary" type="submit">
             {{ __('Save') }}
         </button>
     </div>

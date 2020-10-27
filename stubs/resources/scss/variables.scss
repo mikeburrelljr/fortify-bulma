@@ -1,0 +1,25 @@
+// Set your brand colors.
+$bright-blue: #1c64f2;
+$dark-blue: #1e429f;
+
+// Update Bulma's global variables.
+$blue: $bright-blue;
+$purple: #9333ea;
+$red: #f43f5e;
+$green: #22c55e;
+
+$grey-darker: #0f172a;
+$grey-dark: #1e293b;
+$grey: #475569;
+$grey-light: #94a3b8;
+$grey-lighter: #f1f5f9;
+$grey-lightest: #f8fafc;
+
+$family-sans-serif: "Nunito", sans-serif;
+$primary: $dark-blue;
+$link: $bright-blue;
+$fullhd-enabled: false;
+
+// Update some of Bulma's component variables.
+$body-background-color: $grey-lighter;
+

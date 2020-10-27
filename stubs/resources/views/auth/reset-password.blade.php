@@ -1,40 +1,42 @@
 @extends('layouts.app')
 
 @section('content')
-    @if ($errors->any())
-        <div>
-            <div>{{ __('Whoops! Something went wrong.') }}</div>
-
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-validation-errors />
 
     <form method="POST" action="{{ route('password.update') }}">
         @csrf
 
-        <input type="hidden" name="token" value="{{ $request->route('token') }}">
+        <input type="hidden" name="token" value="{{ $request->route('token') }}" />
 
-        <div>
-        	<label>{{ __('Email') }}</label>
-        	<input type="email" name="email" value="{{ old('email', $request->email) }}" required autofocus />
+        <div class="field">
+            <label for="email" class="label">
+                {{ __('Email') }}
+            </label>
+            <div class="control">
+                <input type="email" id="email" name="email" value="{{ old('email', $request->email) }}" required autofocus />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Password') }}</label>
-            <input type="password" name="password" required autocomplete="new-password" />
+        <div class="field">
+            <label for="password" class="label">
+                {{ __('Password') }}
+            </label>
+            <div class="control">
+                <input type="password" id="password" name="password" required autocomplete="new-password" />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Confirm Password') }}</label>
-            <input type="password" name="password_confirmation" required autocomplete="new-password" />
+        <div class="field">
+            <label for="password_confirmation" class="label">
+                {{ __('Confirm Password') }}
+            </label>
+            <div class="control">
+                <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" />
+            </div>
         </div>
 
-        <div>
-            <button type="submit">
+        <div class="buttons">
+            <button class="button is-primary" type="submit">
                 {{ __('Reset Password') }}
             </button>
         </div>

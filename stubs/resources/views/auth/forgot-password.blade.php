@@ -1,38 +1,26 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>
+    <div class="block">
         {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
     </div>
 
-    @if (session('status'))
-        <div>
-            {{ session('status') }}
-        </div>
-    @endif
-
-    @if ($errors->any())
-        <div>
-            <div>{{ __('Whoops! Something went wrong.') }}</div>
-
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-validation-errors />
 
     <form method="POST" action="{{ route('password.email') }}">
         @csrf
 
-        <div>
-            <label>{{ __('Email') }}</label>
-            <input type="email" name="email" value="{{ old('email') }}" required autofocus />
+        <div class="field">
+            <label for="email" class="label">
+                {{ __('Email') }}
+            </label>
+            <div class="control">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required autofocus />
+            </div>
         </div>
 
-        <div>
-            <button type="submit">
+        <div class="buttons">
+            <button class="button is-primary" type="submit">
                 {{ __('Email Password Reset Link') }}
             </button>
         </div>

@@ -2,18 +2,26 @@
     @csrf
     @method('PUT')
 
-    <div>
-        <label>{{ __('Name') }}</label>
-        <input type="text" name="name" value="{{ old('name') ?? auth()->user()->name }}" required autofocus autocomplete="name" />
+    <div class="field">
+        <label for="name" class="label">
+            {{ __('Name') }}
+        </label>
+        <div class="control">
+            <input type="text" id="name" name="name" value="{{ old('name') ?? auth()->user()->name }}" required autofocus autocomplete="name" />
+        </div>
     </div>
 
-    <div>
-        <label>{{ __('Email') }}</label>
-        <input type="email" name="email" value="{{ old('email') ?? auth()->user()->email }}" required autofocus />
+    <div class="field">
+        <label for="email" class="label">
+            {{ __('Email') }}
+        </label>
+        <div class="control">
+            <input type="email" id="email" name="email" value="{{ old('email') ?? auth()->user()->email }}" required autofocus />
+        </div>
     </div>
 
-    <div>
-        <button type="submit">
+    <div class="buttons">
+        <button class="button is-primary" type="submit">
             {{ __('Update Profile') }}
         </button>
     </div>

@@ -1,16 +1,15 @@
 {
-    "name": "yournamespace/fortify-yourpreset",
-    "description": "Fortify-driven Laravel UI replacement",
+    "name": "mikeburrelljr/fortify-ui-bulma",
+    "description": "Fortify-driven Laravel UI replacement using Bulma css.",
     "keywords": [
         "fortify-ui"
     ],
-    "homepage": "https://github.com/yourusername/fortify-yourpreset",
+    "homepage": "https://github.com/mikeburrelljr/fortify-ui-bulma",
     "license": "MIT",
     "authors": [
         {
-            "name": "Your Name",
-            "email": "you@yourdomain.com",
-            "homepage": "https://yourusername.github.io",
+            "name": "Mike Burrell, Jr.",
+            "email": "mike@remoteforce.com",
             "role": "Developer"
         }
     ],
@@ -27,12 +26,12 @@
     },
     "autoload": {
         "psr-4": {
-            "YourNamespace\\FortifyUIPreset\\": "src"
+            "MikeBurrellJr\\FortifyUIBulma\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "YourNamespace\\FortifyUIPreset\\Tests\\": "tests"
+            "MikeBurrellJr\\FortifyUIBulma\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -47,7 +46,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "YourNamespace\\FortifyUIPreset\\FortifyUIPresetServiceProvider"
+              "FortifyUIBulmaServiceProvider"
             ]
         }
     },

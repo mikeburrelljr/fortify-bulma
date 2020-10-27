@@ -1,28 +1,22 @@
 @extends('layouts.app')
 
 @section('content')
-    @if ($errors->any())
-        <div>
-            <div>{{ __('Whoops! Something went wrong.') }}</div>
-
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-validation-errors />
 
     <form method="POST" action="{{ route('password.confirm') }}">
         @csrf
 
-        <div>
-            <label>{{ __('Password') }}</label>
-            <input type="password" name="password" required autocomplete="current-password" />
+        <div class="field">
+            <label for="password" class="label">
+                {{ __('Password') }}
+            </label>
+            <div class="control">
+                <input type="password" id="password" name="password" required autocomplete="current-password" />
+            </div>
         </div>
 
-        <div>
-            <button type="submit">
+        <div class="buttons">
+            <button class="button is-primary" type="submit">
                 {{ __('Confirm Password') }}
             </button>
         </div>

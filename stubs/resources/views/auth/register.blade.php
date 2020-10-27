@@ -1,49 +1,57 @@
 @extends('layouts.app')
 
 @section('content')
-    @if ($errors->any())
-        <div>
-            <div>{{ __('Whoops! Something went wrong.') }}</div>
-
-            <ul>
-                @foreach ($errors->all() as $error)
-                    <li>{{ $error }}</li>
-                @endforeach
-            </ul>
-        </div>
-    @endif
+    <x-validation-errors />
 
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
-        <div>
-            <label>{{ __('Name') }}</label>
-            <input type="text" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+        <div class="field">
+            <label for="name" class="label">
+                {{ __('Name') }}
+            </label>
+            <div class="control">
+                <input type="text" id="name" name="name" value="{{ old('name') }}" required autofocus autocomplete="name" />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Email') }}</label>
-            <input type="email" name="email" value="{{ old('email') }}" required />
+        <div class="field">
+            <label for="email" class="label">
+                {{ __('Email') }}
+            </label>
+            <div class="control">
+                <input type="email" id="email" name="email" value="{{ old('email') }}" required />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Password') }}</label>
-            <input type="password" name="password" required autocomplete="new-password" />
+        <div class="field">
+            <label for="password" class="label">
+                {{ __('Password') }}
+            </label>
+            <div class="control">
+                <input type="password" id="password" name="password" required autocomplete="new-password" />
+            </div>
         </div>
 
-        <div>
-            <label>{{ __('Confirm Password') }}</label>
-            <input type="password" name="password_confirmation" required autocomplete="new-password" />
+        <div class="field">
+            <div class="control">
+                <label for="password_confirmation" class="checkbox">
+                    <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" />
+                    {{ __('Confirm Password') }}
+                </label>
+            </div>
         </div>
 
-        <a href="{{ route('login') }}">
-            {{ __('Already registered?') }}
-        </a>
-
-        <div>
-            <button type="submit">
+        <div class="buttons">
+            <button class="button is-primary" type="submit">
                 {{ __('Register') }}
             </button>
+        </div>
+
+        <div class="block">
+            <a href="{{ route('login') }}">
+                {{ __('Already registered?') }}
+            </a>
         </div>
     </form>
 @endsection

@@ -4,26 +4,14 @@
 
 Here are the steps to customize this template with your preset
 
-- Rename the files in the `src` directory. Example `FortifyUIBootstrapCommand.php`
-    - Make sure you update any `use` statements and namespaces
 - Add your preset stubs to the `stubs` directory
 - Add your preset image and preset screenshots
 - Update the `composer.json`
-    - Replace all instances of `YourNamespace\\FortifyUIPreset` with your details. For example: `SomeDude\\FortifyUIBootstrap`
-- Search & Replace all of the following terms
-    - YourNamespace
-    - yournamespace
-    - YourPreset
-    - yourpreset
-    - SomeFramework
-    - Your Name
-    - yourusername
-    - you@yourdomain.com
 
 
 # Introduction
 
-**YourPreset** is a Laravel Fortify UI preset, built with SomeFramework.
+**FortifyUIBulma** is a Laravel Fortify UI preset, built with Bulma css.
 
 - [Requirements](#requirements)
 - [Installation](#installation)
@@ -36,19 +24,19 @@ This package requires Laravel Fortify and FortifyUI. Installing [*FortifyUI*](ht
 <a name="installation"></a>
 ## Installation
 
-To get started, you'll need to install **YourPreset** using Composer.
+To get started, you'll need to install **FortifyUIBulma** using Composer.
 
 ```bash
-composer require yournamespace/fortify-yourpreset
+composer require mikeburrelljr/fortify-ui-bulma
 ```
 
 Next, you'll need to run the install command:
 
 ```bash
-php artisan fortify-ui:yourpreset
+php artisan fortify-ui:bulma
 ```
 
-This command will publish **YourPreset's** views and resources to your project.
+This command will publish **FortifyUIBulma's** views and resources to your project.
 
 - All `auth` views
 - Other files...

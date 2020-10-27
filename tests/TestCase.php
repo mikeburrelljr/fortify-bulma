@@ -1,6 +1,6 @@
 <?php
 
-namespace YourNamespace\FortifyUIPreset\Tests;
+namespace MikeBurrellJr\FortifyUIBulma\Tests;
 
 use Orchestra\Testbench\TestCase as Orchestra;
 
@@ -14,7 +14,7 @@ class TestCase extends Orchestra
     protected function getPackageProviders($app)
     {
         return [
-            FortifyUIPresetServiceProvider::class,
+            FortifyUIBulmaServiceProvider::class,
         ];
     }
 }

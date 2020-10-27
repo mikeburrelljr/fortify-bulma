@@ -8,8 +8,28 @@
         <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>{{ config('app.name', 'Laravel') }}</title>
+
+        <!-- Fonts -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap">
+
+        <!-- Styles -->
+        <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+
+        <!-- Icons -->
+        <script src="https://use.fontawesome.com/releases/v5.15.1/js/all.js" defer></script>
+
+        <!-- Scripts -->
+        <script src="{{ mix('js/app.js') }}" defer></script>
     </head>
     <body>
-        @yield('content')
+        <x-navbar />
+
+        <section class="section">
+            <div class="container">
+                <x-status-alert />
+
+                @yield('content')
+            </div>
+        </section>
     </body>
 </html>
