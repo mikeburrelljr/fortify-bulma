@@ -1,11 +1,11 @@
 <?php
 
-namespace MikeBurrellJr\FortifyUIBulma;
+namespace MikeBurrellJr\FortifyBulma;
 
 use Illuminate\Support\ServiceProvider;
-use MikeBurrellJr\FortifyUIBulma\Commands\FortifyUIBulmaCommand;
+use MikeBurrellJr\FortifyBulma\Commands\FortifyBulmaCommand;
 
-class FortifyUIBulmaServiceProvider extends ServiceProvider
+class FortifyBulmaServiceProvider extends ServiceProvider
 {
     public function boot()
     {
@@ -14,12 +14,14 @@ class FortifyUIBulmaServiceProvider extends ServiceProvider
                 __DIR__ . '/../stubs/resources/views' => base_path('resources/views'),
                 __DIR__ . '/../stubs/resources/scss' => base_path('resources/scss'),
                 __DIR__ . '/../stubs/resources/js' => base_path('resources/js'),
+                // __DIR__ . '/../stubs/.editorconfig' => base_path('.editorconfig'),
+                // __DIR__ . '/../stubs/.gitignore' => base_path('.gitignore'),
                 __DIR__ . '/../stubs/package.json' => base_path('package.json'),
                 __DIR__ . '/../stubs/webpack.mix.js' => base_path('webpack.mix.js'),
-            ], 'fortify-ui-bulma-resources');
+            ], 'fortify-bulma-resources');
 
             $this->commands([
-                FortifyUIBulmaCommand::class,
+                FortifyBulmaCommand::class,
             ]);
         }
     }

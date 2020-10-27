@@ -1,29 +1,19 @@
 @extends('layouts.app')
 
 @section('content')
-    <div>You are logged in!</div>
-
-    <form method="POST" action="{{ route('logout') }}">
-        @csrf
-
-        <div class="buttons">
-            <button class="button is-outline is-dark" type="submit">
-                {{ __('Logout') }}
-            </button>
+    <section class="hero is-info is-large">
+        <div class="hero-body">
+            <div class="container">
+                <h1 class="title">
+                    Welcome, {{ Auth::user()->name }}!
+                </h1>
+                <h2 class="subtitle">
+                    It's
+                    <time datetime="{{ now()->format('c') }}">
+                        {{ now()->format('l, F \\t\\h\\e jS \\@ g:i a') }}!
+                    </time>
+                </h2>
+            </div>
         </div>
-    </form>
-
-    <hr>
-
-    @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updateProfileInformation()))
-        @include('profile.update-profile-information-form')
-    @endif
-
-    @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updatePasswords()))
-        @include('profile.update-password-form')
-    @endif
-
-    @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::twoFactorAuthentication()))
-        @include('profile.two-factor-authentication-form')
-    @endif
+    </section>
 @endsection

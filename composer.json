@@ -1,14 +1,18 @@
 {
-    "name": "mikeburrelljr/fortify-ui-bulma",
-    "description": "Fortify-driven Laravel UI replacement using Bulma css.",
+    "name": "mikeburrelljr/fortify-bulma",
+    "description": "Fortify-driven Laravel UI replacement",
     "keywords": [
-        "fortify-ui"
+        "mikeburrelljr",
+        "fortify-bulma",
+        "fortify",
+        "bulma",
+        "laravel"
     ],
-    "homepage": "https://github.com/mikeburrelljr/fortify-ui-bulma",
+    "homepage": "https://github.com/mikeburrelljr/fortify-bulma",
     "license": "MIT",
     "authors": [
         {
-            "name": "Mike Burrell, Jr.",
+            "name": "Mike Burrell",
             "email": "mike@remoteforce.com",
             "role": "Developer"
         }
@@ -26,12 +30,12 @@
     },
     "autoload": {
         "psr-4": {
-            "MikeBurrellJr\\FortifyUIBulma\\": "src"
+            "MikeBurrellJr\\FortifyBulma\\": "src"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "MikeBurrellJr\\FortifyUIBulma\\Tests\\": "tests"
+            "MikeBurrellJr\\FortifyBulma\\Tests\\": "tests"
         }
     },
     "scripts": {
@@ -46,7 +50,7 @@
     "extra": {
         "laravel": {
             "providers": [
-              "FortifyUIBulmaServiceProvider"
+                "MikeBurrellJr\\FortifyBulma\\FortifyBulmaServiceProvider"
             ]
         }
     },

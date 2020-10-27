@@ -11,7 +11,7 @@
          verbose="true"
 >
     <testsuites>
-        <testsuite name="MikeBurrellJr\FortifyUIBulma Test Suite">
+        <testsuite name="MikeBurrellJr Test Suite">
             <directory>tests</directory>
         </testsuite>
     </testsuites>

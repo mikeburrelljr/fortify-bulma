@@ -1,6 +1,6 @@
 <?php
 
-namespace MikeBurrellJr\FortifyUIBulma\Tests;
+namespace MikeBurrellJr\FortifyBulma\Tests;
 
 class ExampleTest extends TestCase
 {
