@@ -1,3 +1,19 @@
 @import "variables";
 
+// Helpers.
+.fill-current {
+    fill: currentColor;
+}
+
+// Navigation.
+.navbar {
+    border-bottom: 1px solid $grey-200;
+
+    .navbar-item {
+        &.is-active {
+            font-weight: 600;
+        }
+    }
+}
+
 // Insert your global styles here.

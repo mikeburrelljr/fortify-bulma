@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-    <div class="box">
+    <div class="box is-white">
         @if (Laravel\Fortify\Features::enabled(Laravel\Fortify\Features::updateProfileInformation()))
             @include('profile.update-profile-information-form')
         @endif

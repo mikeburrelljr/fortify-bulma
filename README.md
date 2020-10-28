@@ -24,7 +24,7 @@ composer require mikeburrelljr/fortify-bulma
 Next, you'll need to run the install command:
 
 ```bash
-php artisan fortify-ui:bulma
+php artisan fortify-ui:install && php artisan fortify-ui:bulma
 ```
 
 This command will publish **FortifyBulmas's** views and resources to your project.

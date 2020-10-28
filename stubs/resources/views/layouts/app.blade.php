@@ -31,5 +31,7 @@
                 @yield('content')
             </div>
         </section>
+
+{{--        <x-footer />--}}
     </body>
 </html>

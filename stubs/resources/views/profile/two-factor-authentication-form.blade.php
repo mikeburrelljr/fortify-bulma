@@ -3,7 +3,7 @@
     <form method="POST" action="{{ url('user/two-factor-authentication') }}">
         @csrf
 
-        <div class="buttons">
+        <div class="buttons is-right">
             <button class="button is-outlined is-primary" type="submit">
                 {{ __('Enable Two-Factor') }}
             </button>
@@ -15,7 +15,7 @@
         @csrf
         @method('DELETE')
 
-        <div class="buttons">
+        <div class="buttons is-right">
             <button class="button is-outlined is-danger" type="submit">
                 {{ __('Disable Two-Factor') }}
             </button>
@@ -48,11 +48,12 @@
     <form method="POST" action="{{ url('user/two-factor-recovery-codes') }}">
         @csrf
 
-        <div class="buttons">
-            <button class="button is-outlined is-primary" type="submit">
+        <div class="buttons is-right">
+            <button class="button is-outlined is-dark" type="submit">
                 {{ __('Regenerate Recovery Codes') }}
             </button>
         </div>
     </form>
 @endif
+
 <hr>

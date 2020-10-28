@@ -7,7 +7,7 @@
             {{ __('Current Password') }}
         </label>
         <div class="control">
-            <input type="password" id="current_password" name="current_password" required autocomplete="current-password" />
+            <input class="input" type="password" id="current_password" name="current_password" required autocomplete="current-password" />
         </div>
     </div>
 
@@ -25,12 +25,12 @@
             {{ __('Confirm Password') }}
         </label>
         <div class="control">
-            <input type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" />
+            <input class="input" type="password" id="password_confirmation" name="password_confirmation" required autocomplete="new-password" />
         </div>
     </div>
 
-    <div class="buttons">
-        <button class="button is-primary" type="submit">
+    <div class="buttons is-right">
+        <button class="button is-dark" type="submit">
             {{ __('Save') }}
         </button>
     </div>

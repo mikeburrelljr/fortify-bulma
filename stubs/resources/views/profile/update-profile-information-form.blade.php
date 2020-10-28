@@ -7,7 +7,7 @@
             {{ __('Name') }}
         </label>
         <div class="control">
-            <input type="text" id="name" name="name" value="{{ old('name') ?? auth()->user()->name }}" required autofocus autocomplete="name" />
+            <input class="input" type="text" id="name" name="name" value="{{ old('name') ?? auth()->user()->name }}" required autofocus autocomplete="name" />
         </div>
     </div>
 
@@ -16,12 +16,12 @@
             {{ __('Email') }}
         </label>
         <div class="control">
-            <input type="email" id="email" name="email" value="{{ old('email') ?? auth()->user()->email }}" required autofocus />
+            <input class="input" type="email" id="email" name="email" value="{{ old('email') ?? auth()->user()->email }}" required autofocus />
         </div>
     </div>
 
-    <div class="buttons">
-        <button class="button is-primary" type="submit">
+    <div class="buttons is-right">
+        <button class="button is-dark" type="submit">
             {{ __('Update Profile') }}
         </button>
     </div>
