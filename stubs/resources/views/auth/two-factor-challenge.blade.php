@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('title', 'Two Factor Challenge')
+
 @section('content')
     <x-authentication-card>
+        <h1 class="title is-4 has-text-grey-light mb-4">
+            {{ __('Two Factor Challenge') }}
+        </h1>
+
         <x-validation-errors />
 
         <form x-data="{ recoveryCodeIsVisible: false }" method="POST" action="{{ url('/two-factor-challenge') }}">

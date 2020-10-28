@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('title', 'Confirm Password')
+
 @section('content')
     <x-authentication-card>
+        <h1 class="title is-4 has-text-grey-light mb-4">
+            {{ __('Confirm Password') }}
+        </h1>
+
         <x-validation-errors />
 
         <form method="POST" action="{{ route('password.confirm') }}">

@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('title', 'Login')
+
 @section('content')
     <x-authentication-card>
+        <h1 class="title is-4 has-text-grey-light mb-4">
+            {{ __('Login') }}
+        </h1>
+
         <x-validation-errors />
 
         <form method="POST" action="{{ route('login') }}">

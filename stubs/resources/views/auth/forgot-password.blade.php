@@ -1,7 +1,13 @@
 @extends('layouts.app')
 
+@section('title', 'Forgot Password')
+
 @section('content')
     <x-authentication-card>
+        <h1 class="title is-4 has-text-grey-light mb-4">
+            {{ __('Forgot Password') }}
+        </h1>
+
         <div class="block">
             {{ __('Forgot your password? No problem. Just let us know your email address and we will email you a password reset link that will allow you to choose a new one.') }}
         </div>

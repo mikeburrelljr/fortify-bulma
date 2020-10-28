@@ -16,4 +16,21 @@
     }
 }
 
+// Forms.
+.auth-box,
+.app-box {
+    .input {
+        border-color: $grey-light;
+
+        &:hover {
+            border-color: $grey;
+        }
+
+        &:active,
+        &:focus {
+            border-color: $primary;
+        }
+    }
+}
+
 // Insert your global styles here.

@@ -21,7 +21,7 @@
             x-transition:leave="transition ease-in duration-300"
             x-transition:leave-start="opacity-100 transform scale-100"
             x-transition:leave-end="opacity-0 transform scale-90"
-            class="notification is-primary mb-2"
+            class="notification is-success mb-5"
         >
             <button @click="statusIsVisible = false" class="delete"></button>
             {{ $message }}

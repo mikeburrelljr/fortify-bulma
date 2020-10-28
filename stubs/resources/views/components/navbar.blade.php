@@ -1,9 +1,9 @@
-<nav x-data="{ hamburgerMenuIsOpen: false }" class="navbar has-shadow is-white is-spaced" role="navigation" aria-label="main navigation">
+<nav x-data="{ hamburgerMenuIsOpen: false }" class="navbar is-white is-spaced is-transparent has-shadow" role="navigation" aria-label="main navigation">
     <div class="container">
         <div class="navbar-brand">
             <a class="navbar-item is-flex is-align-content-center" href="{{ route('home') }}">
                 <x-application-mark class="fill-current has-text-primary" width="19" height="28" />
-                <h1 class="title is-dark ml-2">
+                <h1 class="title is-3 is-dark ml-2">
                     {{ config('app.name', 'Laravel') }}
                 </h1>
             </a>
@@ -33,33 +33,36 @@
                     <div class="navbar-item">
                         <div class="buttons">
                             <a href="{{ route('login') }}" class="button is-dark is-inverted">
-                                {{ __('Sign in') }}
+                                {{ __('Login') }}
                             </a>
 
                             @if (Route::has('register'))
                                 <a href="{{ route('register') }}" class="button is-primary">
-                                    {{ __('Sign up') }}
+                                    {{ __('Register') }}
                                 </a>
                             @endif
                         </div>
                     </div>
 
                 @else
-                    <div class="navbar-item has-dropdown">
-                        <a class="navbar-link">
+                    <div class="navbar-item has-dropdown is-hoverable">
+                        <a href="#!" class="navbar-link">
                             {{ Auth::user()->name }}
                         </a>
 
-                        <div class="navbar-dropdown">
-                            <a class="navbar-item">
-                                <a href="{{ route('logout') }}"
-                                   onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
-                                    {{ __('Log out') }}
-                                </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST">
-                                    @csrf
-                                </form>
+                        <div class="navbar-dropdown is-boxed">
+                            <a href="/user/profile" class="navbar-item">
+                                {{ __('Manage Account') }}
                             </a>
+                            <hr class="navbar-divider">
+                            <a href="{{ route('logout') }}"
+                               class="navbar-item"
+                               onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
+                                {{ __('Log out') }}
+                            </a>
+                            <form id="logout-form" action="{{ route('logout') }}" method="POST">
+                                @csrf
+                            </form>
                         </div>
                     </div>
 

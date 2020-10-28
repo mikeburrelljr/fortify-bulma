@@ -1,6 +1,8 @@
 // Set your brand colors.
 $bright-blue: #1c64f2;
 $dark-blue: #1e429f;
+$light-blue: #ebf5ff;
+$white: #ffffff;
 
 // Update Bulma's global variables.
 $blue: $bright-blue;
@@ -31,6 +33,7 @@ $dark: $grey-darker;
 $text: $grey-dark;
 $primary: $blue;
 $link: $blue;
+$info: $dark-blue;
 $fullhd-enabled: false;
 
 // Update some of Bulma's component variables.
