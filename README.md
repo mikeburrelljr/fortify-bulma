@@ -1,4 +1,4 @@
-<p align="center"><img width="400" src="https://github.com/zacksmash/fortify-ui-preset/raw/master/fortify-preset-image.png"></p>
+<p align="center"><img width="400" src="https://github.com/mikeburrelljr/fortify-bulma/raw/master/fortify-bulma-image.png"></p>
 
 # Introduction
 
@@ -36,7 +36,7 @@ This command will publish **FortifyBulmas's** views and resources to your projec
 - a `.gitignore` file
 - a new route for `user/profile`
 
-<p align="center"><img  src="https://github.com/zacksmash/fortify-ui-preset/raw/master/fortify-preset-screenshot.png"></p>
+<p align="center"><img  src="https://github.com/mikeburrelljr/fortify-bulma/raw/master/fortify-bulma-screenshot.png"></p>
 
 ## License
 
